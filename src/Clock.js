@@ -9,9 +9,11 @@ function Clock(props) {
   useEffect(() => {
     setInterval(() => {
       tick();
-    }, 1000);
+    }, 1000);//componentDidMount
+    
     return () => {
-      clearInterval();
+      clearInterval();//componentWillUnmount
+      
     };
   });
 
